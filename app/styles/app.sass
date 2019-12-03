@@ -1,0 +1,106 @@
+@font-face
+  font-family: 'PumpPro'
+  src: url('fonts/PumpPro.eot')
+  src: url('fonts/PumpPro.eot?#iefix') format('embedded-opentype'), url('fonts/PumpPro.woff2') format('woff2'), url('fonts/PumpPro.woff') format('woff'), url('fonts/PumpPro.ttf')  format('truetype')
+
+@mixin mobile-ish
+  @media (max-width: 768px), (max-height: 700px)
+    @content
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+body
+  background: #807583 url('/assets/images/background.jpg') no-repeat left 10%
+  font: 36px PumpPro, sans-serif
+  @media (min-width: 768px)
+    background-size: contain
+  @media (min-width: 1920px)
+    background-size: auto
+  +mobile-ish
+    background: #807583
+
+section
+  min-height: 95vh
+  display: flex
+  align-items: flex-end
+  flex-direction: column
+  overflow: scroll
+  -webkit-overflow-scrolling: touch
+  +mobile-ish
+    align-items: stretch
+
+h1
+  padding: 20px
+  display: none
+  background: black
+  text-align: center
+  +mobile-ish
+    display: block
+
+  img
+    max-width: 340px
+
+nav
+  width: 50%
+  padding: 20px
+  min-height: min-content
+  display: flex
+  align-content: center
+  flex: 1 1 auto
+  flex-wrap: wrap
+  justify-content: center
+  +mobile-ish
+    width: 100%
+
+  a
+    margin: 20px
+    width: 100%
+    max-width: 340px
+    padding: 30px 0
+    display: flex
+    align-items: center
+    justify-content: center
+    background: url('/assets/images/button.png') no-repeat center center
+    background-size: contain
+    color: white
+    font: 40px PumpPro, sans-serif
+    font-weight: 100
+    text-decoration: none
+
+    @media (min-width: 1200px)
+      width: calc(50% - 40px)
+
+    @media (max-width: 420px)
+      padding: 20px 0
+      font-size: 36px
+
+  .followers
+    margin-left: 5px
+    padding: 3px 7px 2px
+    display: inline-block
+    background: rgba(0,0,0,0.4)
+    border-top: 1px solid rgba(0,0,0,0.25)
+    border-radius: inherit
+    font-size: 0.6em
+    text-shadow: 0 1px 0 rgba(0,0,0,0.25)
+
+footer
+  width: 50%
+  padding: 20px
+  font: 16px Avenir, Helvetica, sans-serif
+  @media (max-width: 1200px)
+    width: 100%
+
+  &, *
+    color: rgba(0,0,0,0.25)
+    text-align: center
+    text-decoration: none
+    transition: color 200ms ease
+
+  a:hover
+    color: rgba(0,0,0,0.5)

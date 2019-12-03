@@ -1,5 +1,41 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<section>
+  <h1><img src="/assets/images/logo.jpg" alt="Th3Jez Avatar"></h1>
 
-{{outlet}}
+  <nav>
+    <a class="teespring" href="https://discord.gg/th3jez">
+      Discord
+    </a>
+
+    <a class="twitch" href="https://www.twitch.tv/th3jez">
+      Twitch
+      {{#if this.model.twitch}}
+        <div class="followers">
+          {{number-shortener this.model.twitch}}
+        </div>
+      {{/if}}
+    </a>
+
+    <a class="twitter" href="https://twitter.com/Th3Jez">
+      Twitter
+      {{#if this.model.twitter}}
+        <div class="followers">
+          {{number-shortener this.model.twitter}}
+        </div>
+      {{/if}}
+    </a>
+
+    <a class="youtube" href="https://www.youtube.com/channel/UCAsrdlefrZyvnELIXLMZkNg">
+      YouTube
+      {{#if this.model.youtube}}
+        <div class="followers">
+          {{number-shortener this.model.youtube}}
+        </div>
+      {{/if}}
+    </a>
+  </nav>
+
+  <footer>
+    Lovingly created by
+    <a href="https://turtleguyy.com/" target="_blank" rel="noopener">@turtleguyy</a> to perpetuate the slaying of titans.
+  </footer>
+</section>
