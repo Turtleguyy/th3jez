@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Th3jez</title>
+    <title>Th3Jez</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,6 +13,16 @@
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/th3jez.css">
 
     {{content-for "head-footer"}}
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-16595431-9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-16595431-9');
+    </script>
   </head>
   <body>
     {{content-for "body"}}

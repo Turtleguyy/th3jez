@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'th3jez',
+    podModulePrefix: 'th3jez/pods',
     environment,
     rootURL: '/',
     locationType: 'auto',
